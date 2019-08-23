@@ -18,7 +18,8 @@ defmodule Gitlab.Client do
 
   @type new_opts :: [
           base_url: binary,
-          access_token: access_token()
+          access_token: access_token(),
+          adapter: Tesla.Client.adapter() | nil,
         ]
 
   @type pagination_opts :: [
@@ -35,6 +36,7 @@ defmodule Gitlab.Client do
   def new(opts \\ []) do
     base_url = Keyword.get(opts, :base_url, @default_base_url)
     access_token = Keyword.get(opts, :access_token)
+    adapter = Keyword.get(opts, :adapter)
 
     middleware = [
       {Tesla.Middleware.BaseUrl, base_url},
@@ -44,7 +46,7 @@ defmodule Gitlab.Client do
 
     middleware
     |> access_token_middleware(access_token)
-    |> Tesla.client()
+    |> Tesla.client(adapter)
   end
 
   @doc false
