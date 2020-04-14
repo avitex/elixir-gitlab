@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/avitex/elixir-gitlab.svg)](https://travis-ci.org/avitex/elixir-gitlab)
+[![Build Status](https://travis-ci.com/avitex/elixir-gitlab.svg?branch=master)](https://travis-ci.com/avitex/elixir-gitlab)
 
 # Gitlab
 
