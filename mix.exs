@@ -16,7 +16,7 @@ defmodule Gitlab.MixProject do
 
   defp deps do
     [
-      {:tesla, "~> 1.2.1"},
+      {:tesla, "~> 1.3.3"},
       {:jason, ">= 1.0.0"},
       {:typed_struct, github: "ejpcmac/typed_struct", branch: "develop"},
       {:typed_struct_cast, github: "avitex/typed-struct-cast", branch: "master"},
