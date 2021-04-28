@@ -1,0 +1,23 @@
+version: 2
+updates:
+- package-ecosystem: mix
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "19:30"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: ex_doc
+    versions:
+    - 0.23.0
+    - 0.24.0
+    - 0.24.1
+  - dependency-name: hackney
+    versions:
+    - 1.17.0
+    - 1.17.1
+    - 1.17.2
+    - 1.17.3
+  - dependency-name: tesla
+    versions:
+    - 1.4.0
